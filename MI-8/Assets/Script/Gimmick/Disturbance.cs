@@ -9,6 +9,13 @@ public class Disturbance : MonoBehaviour
 {
     [SerializeField]
     private List<DisturbanceDisposer> disposers = new List<DisturbanceDisposer>();
+    public List<DisturbanceDisposer> Disposers
+    {
+        get
+        {
+            return disposers;
+        }
+    }
 
     private readonly ISubject<Disturbance> onInactivated = new Subject<Disturbance>();
     public IObservable<Disturbance> OnInactivatedAsObservable()

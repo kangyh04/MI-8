@@ -14,7 +14,7 @@ public class DisturbanceDisposer : MonoBehaviour
 
     private void Awake()
     {
-        ObservableInput.OnTappedAsObservable()
+        ObservableInput.Instance.OnTappedAsObservable()
             .Where(tappedObj => tappedObj == this.gameObject)
             .Subscribe(_ => onTapped.OnNext(this))
             .AddTo(this);

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UniRx;
@@ -10,6 +11,39 @@ public class InGameSceneController : MonoBehaviour
     [SerializeField]
     private List<Disturbance> disturbances = new List<Disturbance>();
     private List<Disturbance> inactivatedDisturbances = new List<Disturbance>();
+
+    private static InGameSceneController instance;
+    public static InGameSceneController Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = GameObject.FindObjectOfType<InGameSceneController>() ?? null;
+                if (instance == null)
+                {
+                    var go = new GameObject("InGameSceneController");
+                    instance = go.AddComponent<InGameSceneController>();
+                }
+            }
+            return instance;
+        }
+    }
+
+    public IEnumerable<DisturbanceDisposer> Disposers
+    {
+        get
+        {
+            return disturbances
+                .Aggregate(
+                new List<DisturbanceDisposer>(),
+                (container, disturbance) =>
+                {
+                    container.AddRange(disturbance.Disposers);
+                    return container;
+                });
+        }
+    }
 
     // [SerializeField]
     // private Button retry;
