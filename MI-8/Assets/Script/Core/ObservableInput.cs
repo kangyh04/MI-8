@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class ObservableInput : MonoBehaviour
 {
+    [SerializeField]
+    private float InaccessibleTime = 0f;
+
     private static ObservableInput instance;
     public static ObservableInput Instance
     {
@@ -51,13 +54,21 @@ public class ObservableInput : MonoBehaviour
             .Zip(
                 InGameSceneController.Disposers.ToObservable(),
                 (hittedObj, targetObj) => Tuple.Create(hittedObj, targetObj.gameObject))
+            .Scan(Tuple.Create(new Tuple<GameObject, GameObject>(null, null), new Tuple<GameObject, GameObject>(null, null)),
+            (container, cur) =>
+            {
+                return Tuple.Create(container.Item2, cur);
+            })
+            .Where(item => item.Item1 != default(Tuple<GameObject, GameObject>))
             .TakeWhile(item =>
             {
-                var hittedObj = item.Item1;
-                var currentTarget = item.Item2;
-                return hittedObj == currentTarget;
+                var preHittedObj = item.Item1.Item1;
+                var preTarget = item.Item1.Item2;
+                return preHittedObj == preTarget;
             })
+            .Select(item => item.Item2)
             .Select(item => item.Item1)
+//             .Skip(TimeSpan.FromSeconds(InaccessibleTime))
             .Share();
     }
 }

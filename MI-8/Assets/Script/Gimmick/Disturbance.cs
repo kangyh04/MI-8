@@ -8,6 +8,8 @@ using UnityEngine;
 public class Disturbance : MonoBehaviour
 {
     [SerializeField]
+    private List<GameObject> changeTarget = new List<GameObject>();
+    [SerializeField]
     private List<DisturbanceDisposer> disposers = new List<DisturbanceDisposer>();
     public List<DisturbanceDisposer> Disposers
     {
@@ -29,6 +31,10 @@ public class Disturbance : MonoBehaviour
         {
             this.gameObject.SetActive(value);
         }
+        get
+        {
+            return this.gameObject.activeInHierarchy;
+        }
     }
 
     public void Activate()
@@ -45,15 +51,36 @@ public class Disturbance : MonoBehaviour
     private void Awake()
     {
         disposers
+            .Where(disposer => disposer.DisposerType == DisposerType.Destoryer)
             .Select(disposer => disposer.OnTappedAsObservable())
-            .Aggregate((pre, cur) =>
+            .ToObservable()
+            .Scan((pre, cur) =>
             {
                 return pre.SelectMany(cur);
             })
+            .Switch()
             .Subscribe(_ =>
             {
                 Inactivate();
                 onInactivated.OnNext(this);
+            })
+            .AddTo(this);
+
+        disposers
+            .Where(disposer => disposer.DisposerType == DisposerType.Modifier)
+            .Select(disposer => disposer.OnTappedAsObservable())
+            .ToObservable()
+            .Scan((pre, cur) =>
+            {
+                return pre.SelectMany(cur);
+            })
+            .Switch()
+            .Subscribe(_ =>
+            {
+                changeTarget.ForEach(obj =>
+                {
+                    obj.SetActive(!obj.activeInHierarchy);
+                });
             })
             .AddTo(this);
     }
