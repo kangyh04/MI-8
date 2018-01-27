@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class ObservableInput : MonoBehaviour
 {
+    [SerializeField]
+    private float InaccessibleTime = 0f;
+
     private static ObservableInput instance;
     public static ObservableInput Instance
     {
@@ -58,6 +61,7 @@ public class ObservableInput : MonoBehaviour
                 return hittedObj == currentTarget;
             })
             .Select(item => item.Item1)
+//             .Skip(TimeSpan.FromSeconds(InaccessibleTime))
             .Share();
     }
 }

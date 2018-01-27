@@ -29,6 +29,10 @@ public class Disturbance : MonoBehaviour
         {
             this.gameObject.SetActive(value);
         }
+        get
+        {
+            return this.gameObject.activeInHierarchy;
+        }
     }
 
     public void Activate()
@@ -45,15 +49,33 @@ public class Disturbance : MonoBehaviour
     private void Awake()
     {
         disposers
+            .Where(disposer => disposer.DisposerType == DisposerType.Destoryer)
             .Select(disposer => disposer.OnTappedAsObservable())
-            .Aggregate((pre, cur) =>
+            .ToObservable()
+            .Scan((pre, cur) =>
             {
                 return pre.SelectMany(cur);
             })
+            .Switch()
             .Subscribe(_ =>
             {
                 Inactivate();
                 onInactivated.OnNext(this);
+            })
+            .AddTo(this);
+
+        disposers
+            .Where(disposer => disposer.DisposerType == DisposerType.Modifier)
+            .Select(disposer => disposer.OnTappedAsObservable())
+            .ToObservable()
+            .Scan((pre, cur) =>
+            {
+                return pre.SelectMany(cur);
+            })
+            .Switch()
+            .Subscribe(_ =>
+            {
+                Active = !Active;
             })
             .AddTo(this);
     }

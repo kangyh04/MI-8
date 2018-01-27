@@ -4,6 +4,12 @@ using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
 
+public enum DisposerType
+{
+    Destoryer,
+    Modifier,
+}
+
 public class DisturbanceDisposer : MonoBehaviour
 {
     [SerializeField]
@@ -11,8 +17,12 @@ public class DisturbanceDisposer : MonoBehaviour
     private readonly ISubject<DisturbanceDisposer> onTapped = new Subject<DisturbanceDisposer>();
     public IObservable<DisturbanceDisposer> OnTappedAsObservable()
     {
-        return onTapped;
+        return onTapped.Share();
     }
+
+    [SerializeField]
+    private DisposerType disposerType;
+    public DisposerType DisposerType { get { return disposerType; } }
 
     private void Awake()
     {
