@@ -27,5 +27,10 @@ public class Spy : MonoBehaviour {
         {
             Debug.Log("Goal!");
         }
+
+        if (collision.GetComponent<Disturbance>() != null)
+        {
+            Debug.Log("Game Over");
+        }
     }
 }
