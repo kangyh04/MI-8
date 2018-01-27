@@ -15,6 +15,6 @@ public class Stage1Manager : MonoBehaviour {
 		
 	}
 	public void PushBackButton(){
-		SceneManager.LoadScene ("Title");
+		SceneManager.LoadScene ("GameTitle");
 	}
 }
