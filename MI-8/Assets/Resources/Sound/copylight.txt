@@ -1,0 +1,23 @@
+_1 ■サイト名：On-Jin ～音人～　■サイトアドレス：https://on-jin.com/
+
+electro 電気の壁の音
+
+_2 【サイト名】フリー音楽素材 H/MIX GALLERY【管理者】　秋山裕和【アドレス】http://www.hmix.net/
+
+stage1BGM ステージ１BGM
+
+_3 効果音ラボhttps://soundeffect-lab.info/agreement/
+
+machinegun1   固定砲台 発射音　跳弾あり
+machinegun2   固定砲台 発車音　跳弾なし
+
+_4 無料効果音で遊ぼう！http://taira-komori.jpn.org/index.html
+
+bomb1 爆発音予備
+bomb2 固定砲台爆発音　レーザーに当たって
+bomb3 ステージ２ダイナマイト
+
+_10 表記必要無し
+
+run1 予備
+stage1step ステージ１足音
