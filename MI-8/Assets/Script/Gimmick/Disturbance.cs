@@ -8,6 +8,8 @@ using UnityEngine;
 public class Disturbance : MonoBehaviour
 {
     [SerializeField]
+    private List<GameObject> changeTarget = new List<GameObject>();
+    [SerializeField]
     private List<DisturbanceDisposer> disposers = new List<DisturbanceDisposer>();
     public List<DisturbanceDisposer> Disposers
     {
@@ -75,7 +77,10 @@ public class Disturbance : MonoBehaviour
             .Switch()
             .Subscribe(_ =>
             {
-                Active = !Active;
+                changeTarget.ForEach(obj =>
+                {
+                    obj.SetActive(!obj.activeInHierarchy);
+                });
             })
             .AddTo(this);
     }
