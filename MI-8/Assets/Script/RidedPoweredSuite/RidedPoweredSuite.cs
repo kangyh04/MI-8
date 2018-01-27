@@ -6,6 +6,7 @@ public class RidedPoweredSuite : MonoBehaviour
 {
     // move speed
     public float PwSpeed = 5.0f;
+    public float PwVspeed = 10.0f;
 
     // private values
     bool isGoaled = false;
@@ -22,9 +23,16 @@ public class RidedPoweredSuite : MonoBehaviour
     {
         if (isGoaled == false)
         {
-            // move
+            // move horizontal
             Vector3 pos = transform.position;
             pos.x += PwSpeed * Time.deltaTime;
+            transform.position = pos;
+        }
+        else
+        {
+            // move vertical
+            Vector3 pos = transform.position;
+            pos.y += PwVspeed * Time.deltaTime;
             transform.position = pos;
         }
     }
