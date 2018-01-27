@@ -398,7 +398,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 114726118311580598, guid: b6f1d479f26e48c438dc08a539263f6d,
+          type: 2}
         m_MethodName: PushStartButton
         m_Mode: 1
         m_Arguments:

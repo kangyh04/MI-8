@@ -15,7 +15,7 @@ public class TitleManager : MonoBehaviour {
 		
 	}
 	public void PushStartButton(){
-		SceneManager.LoadScene ("Stage1");
+		SceneManager.LoadScene ("Hangar");
 	}
 	public void PushStaffButton(){
 		SceneManager.LoadScene ("Staff");
