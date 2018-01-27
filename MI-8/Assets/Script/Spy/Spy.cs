@@ -23,11 +23,21 @@ public class Spy : MonoBehaviour {
     // collision
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Hanger stage clear
         if( collision.tag == "PoweredSuite" )
         {
+            // next stage
+//            SceneManager.LoadScene("Cave");
             Debug.Log("Goal!");
         }
 
+        // Hit Obstacle
+        if (collision.tag == "Obstacle")
+        {
+            Debug.Log("Game Over");
+        }
+
+        // Hit any
         if (collision.GetComponent<Disturbance>() != null)
         {
             Debug.Log("Game Over");

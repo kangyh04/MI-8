@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spy
   - PoweredSuite
+  - Obstacle
+  - RidedPowerdSuite
+  - Ladders
   layers:
   - Default
   - TransparentFX
