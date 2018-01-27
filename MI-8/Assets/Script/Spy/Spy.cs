@@ -1,24 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spy : MonoBehaviour {
     // public values
     public float SpySpeed = 0.1f;
+    public bool IsGoaled = false;
 
-	// Use this for initialization
-	void Start () {
-		
+    // private values
+
+    // Use this for initialization
+    void Start () {
+        IsGoaled = false;		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        // move spy
-        Vector3 spypos = transform.position;
-        spypos.x += SpySpeed * Time.deltaTime;
+        if(IsGoaled == false)
+        {
+            // move spy
+            Vector3 spypos = transform.position;
+            spypos.x += SpySpeed * Time.deltaTime;
 
-        transform.position = spypos;
-	}
+            transform.position = spypos;
+        }
+    }
 
     // collision
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,8 +33,10 @@ public class Spy : MonoBehaviour {
         // Hanger stage clear
         if( collision.tag == "PoweredSuite" )
         {
+            IsGoaled = true;
+            
             // next stage
-//            SceneManager.LoadScene("Cave");
+            //SceneManager.LoadScene("Escape");
             Debug.Log("Goal!");
         }
 
