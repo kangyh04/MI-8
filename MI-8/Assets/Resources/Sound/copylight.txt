@@ -11,6 +11,7 @@ bomb3 ステージ２ダイナマイト
 botton1 決定音　スタートの音
 botton2 キャンセル音　ゲームを止める、タイトルへ戻るなど
 drone1 ドローン駆動音
+drone2 ドローン墜落音
 electro 電気の壁の音
 gunfall 固定砲台（セントリーガン）が倒れる音
 glass ガラスが割れる音
@@ -18,6 +19,7 @@ machinegun1   固定砲台 発射音　跳弾あり
 machinegun2   固定砲台 発車音　跳弾なし
 run1 予備
 robotstartup パワードスーツ装着
+sea 海　環境音
 stage1BGM ステージ１BGM
 stage1BGMlongステージ１BGM元
 submarine1 潜水艦ソナー
