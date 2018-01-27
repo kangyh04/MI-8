@@ -4,7 +4,7 @@ _3 効果音ラボhttps://soundeffect-lab.info/agreement/
 _4 無料効果音で遊ぼう！http://taira-komori.jpn.org/index.html
 _10 表記必要無し
 
-
+base-siren1 パワードスーツのガラスケースが割れたときになるアラート
 bomb1 爆発音予備
 bomb2 固定砲台爆発音　レーザーに当たって
 bomb3 ステージ２ダイナマイト
@@ -13,18 +13,21 @@ botton2 キャンセル音　ゲームを止める、タイトルへ戻るなど
 drone1 ドローン駆動音
 drone2 ドローン墜落音
 electro 電気の壁の音
-gunfall 固定砲台（セントリーガン）が倒れる音
 glass ガラスが割れる音
-machinegun1   固定砲台 発射音　跳弾あり
-machinegun2   固定砲台 発車音　跳弾なし
+gunfall 固定砲台（セントリーガン）が倒れる音
+lockon 固定砲台が主人公をロックオンしたときの音
+machinegun1   固定砲台 発射音　跳弾あり　使用
+machinegun2   固定砲台 発車音　跳弾なし　余裕があれば主人公がタレットに撃たれた時の音はこちら
+robotstartup パワードスーツ装着、起動
 run1 予備
-robotstartup パワードスーツ装着
-sea 海　環境音
+sea ステージ１　海　環境音
 stage1BGM ステージ１BGM
 stage1BGMlongステージ１BGM元
+stage1step ステージ１足音
 submarine1 潜水艦ソナー
 submarine2 潜水艦前進音
-stage1step ステージ１足音
+quake 潜水艦が壁にぶつかった時の音
+
 
 
 
