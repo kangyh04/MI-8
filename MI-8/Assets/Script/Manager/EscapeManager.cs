@@ -79,7 +79,7 @@ public class EscapeManager : MonoBehaviour {
             if (RestartCounter > RestartCounterMax)
             {
                 SceneManager.LoadScene("Escape");
-                //SceneManager.LoadScene("Ishihataescape");
+                //SceneManager.LoadScene("IshihataEscapeRobo");
             }
         }
 
