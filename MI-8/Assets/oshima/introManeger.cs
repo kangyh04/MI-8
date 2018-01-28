@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StaffManager : MonoBehaviour {
+public class introManeger: MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -15,6 +15,6 @@ public class StaffManager : MonoBehaviour {
 		
 	}
 	public void PushBackButton(){
-		SceneManager.LoadScene ("GameTitle");
+		SceneManager.LoadScene ("Hangar");
 	}
 }
