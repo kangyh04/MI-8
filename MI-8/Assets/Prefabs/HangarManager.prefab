@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4761595133807644}
   - component: {fileID: 114755167083054806}
   - component: {fileID: 114161601632841738}
-  - component: {fileID: 82006032737736608}
+  - component: {fileID: 82165533025214370}
   m_Layer: 0
   m_Name: HangarManager
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &82006032737736608
+--- !u!82 &82165533025214370
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,11 +51,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: dc1f7afecebe868469cd4caa83b181ed, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -149,3 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EndCounterMax: 5
+  RestartCounterMax: 1
+  FadeOutStartCounterMax: 0.1
+  JingleStart: {fileID: 8300000, guid: 37c5a3ceb5732594a832459d676a4f1f, type: 3}
+  JingleClear: {fileID: 8300000, guid: a9543845771304c4c9b70367b99cefe0, type: 3}
+  JingleGameOver: {fileID: 8300000, guid: b3c4db32be8eee9498d9aa75077aad92, type: 3}

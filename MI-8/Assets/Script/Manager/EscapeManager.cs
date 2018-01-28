@@ -78,8 +78,8 @@ public class EscapeManager : MonoBehaviour {
             RestartCounter += Time.deltaTime;
             if (RestartCounter > RestartCounterMax)
             {
-                //SceneManager.LoadScene("Hangar");
-                SceneManager.LoadScene("Ishihataescape");
+                SceneManager.LoadScene("Escape");
+                //SceneManager.LoadScene("Ishihataescape");
             }
         }
 

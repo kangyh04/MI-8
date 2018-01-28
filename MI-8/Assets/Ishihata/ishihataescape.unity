@@ -553,11 +553,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114972811055174618, guid: 82c0a300f4314424fa55d1a8577148c6,
-        type: 2}
-      propertyPath: JingleGameOver
-      value: 
-      objectReference: {fileID: 8300000, guid: b3c4db32be8eee9498d9aa75077aad92, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 82c0a300f4314424fa55d1a8577148c6, type: 2}
   m_IsPrefabParent: 0
