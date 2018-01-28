@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: TransMission Impposible
+  m_Text: TransMission Imposible
 --- !u!222 &48263762
 CanvasRenderer:
   m_ObjectHideFlags: 0
