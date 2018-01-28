@@ -132,4 +132,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be65bea7b8e320140851715878acee0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EndCounterMax: 5
+  RestartCounterMax: 1
+  FadeOutStartCounterMax: 0.1
   PwCounterMax: 8
+  JingleGameOver: {fileID: 8300000, guid: b3c4db32be8eee9498d9aa75077aad92, type: 3}

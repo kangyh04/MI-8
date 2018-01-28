@@ -7,16 +7,19 @@ public class Spy : MonoBehaviour {
     // public values
     public float SpySpeed = 0.1f;
     public bool IsGoaled = false;
+    public bool IsGameOver = false;
 
     // private values
 
     // Use this for initialization
     void Start () {
-        IsGoaled = false;		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        IsGoaled = false;
+        IsGameOver = false;
+    }
+
+    // Update is called once per frame
+    void Update () {
+        // move
         if(IsGoaled == false)
         {
             // move spy
@@ -24,6 +27,11 @@ public class Spy : MonoBehaviour {
             spypos.x += SpySpeed * Time.deltaTime;
 
             transform.position = spypos;
+
+            // GameOver
+        }else if( IsGameOver == false)
+        {
+               // don't move
         }
     }
 
@@ -43,12 +51,16 @@ public class Spy : MonoBehaviour {
         // Hit Obstacle
         if (collision.tag == "Obstacle")
         {
-            Debug.Log("Game Over");
+            // GameOver
+            IsGameOver = true;
+            Debug.Log("Game Over by Obstacle");
         }
 
         // Hit any
         if (collision.GetComponent<Disturbance>() != null)
         {
+            // GameOver
+            IsGameOver = true;
             Debug.Log("Game Over");
         }
     }
