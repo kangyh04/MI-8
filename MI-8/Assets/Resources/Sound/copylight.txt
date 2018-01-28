@@ -65,3 +65,4 @@ water 水噴出音　水パイプ破裂時
 
 ED
 EDBGM EDのBGM
+lastbomb 最後隕石の爆発
