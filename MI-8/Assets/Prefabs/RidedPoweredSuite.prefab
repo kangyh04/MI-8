@@ -1261,6 +1261,9 @@ MonoBehaviour:
   PwAcceleSpeed: 0.05
   PwVspeed: 10
   PwCounterMax: 8
+  SlowCounterMax: 5
+  BrakeSpeed: 0.1
+  SlowSpeedMin: 0.2
   IsGoaled: 0
   IsGameOver: 0
   WaitCounterMax: 1

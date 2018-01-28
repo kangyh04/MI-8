@@ -10,6 +10,9 @@ public class RidedPoweredSuite : MonoBehaviour
     public float PwAcceleSpeed = 0.1f;
     public float PwVspeed = 10.0f;
     public float PwCounterMax = 8.0f;
+    public float SlowCounterMax = 5.0f;
+    public float BrakeSpeed = 0.1f;
+    public float SlowSpeedMin = 0.2f;
     public bool IsGoaled = false;
     public bool IsGameOver = false;
     public float WaitCounterMax = 1.0f;
@@ -57,11 +60,11 @@ public class RidedPoweredSuite : MonoBehaviour
         }
         else
         {
-            if( IsWait == true)
+            if (IsWait == true)
             {
                 // don't move
                 WaitCounter += Time.deltaTime;
-                if(WaitCounter > WaitCounterMax)
+                if (WaitCounter > WaitCounterMax)
                 {
                     IsWait = false;
                 }
@@ -72,14 +75,18 @@ public class RidedPoweredSuite : MonoBehaviour
                 Vector3 pos = transform.position;
                 pos.y += PwVspeed * Time.deltaTime;
                 transform.position = pos;
-            }
 
-            // counter
-            //EndCounter += Time.deltaTime;
-            //if(EndCounter > PwCounterMax )
-            //{
-            //SceneManager.LoadScene("GameTitle");
-            //}
+                // counter
+                EndCounter += Time.deltaTime;
+                if (EndCounter > SlowCounterMax)
+                {
+                    PwVspeed -= BrakeSpeed;
+                    if( PwVspeed < SlowSpeedMin)
+                    {
+                        PwVspeed = SlowSpeedMin;
+                    }
+                }
+            }
         }
     }
 

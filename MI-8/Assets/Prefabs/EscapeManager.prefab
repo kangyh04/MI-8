@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4415632422089578}
   - component: {fileID: 114972811055174618}
   - component: {fileID: 82426400823473940}
+  - component: {fileID: 114184777662977222}
   m_Layer: 0
   m_Name: EscapeManager
   m_TagString: Untagged
@@ -121,6 +122,28 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114184777662977222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1824475794214048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af8597338c0b10a48941cea37905d192, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disturbances:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114972811055174618
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -135,5 +158,5 @@ MonoBehaviour:
   EndCounterMax: 6
   RestartCounterMax: 1
   FadeOutStartCounterMax: 0.1
-  PwCounterMax: 8
+  PwCounterMax: 15
   JingleGameOver: {fileID: 8300000, guid: b3c4db32be8eee9498d9aa75077aad92, type: 3}
