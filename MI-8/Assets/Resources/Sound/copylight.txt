@@ -38,15 +38,21 @@ stage2
 
 base-siren1 パワードスーツのガラスケースが割れたときになるアラート
 bomb3 ステージ２ダイナマイト
+boost 主人公ラスト宇宙空間まで
 contact ダイナマイト受信音
 drill ドリル駆動音
 electroshort 敵パワードスーツショート
 flame 火炎放射音
+hover 主人公パワードスーツ移動音
 scream ゲームオーバー時の主人公の悲鳴
 stage2BGM ステージ２BGM
 shutter1  シャッターが降りている音
 shutter2 シャッターが止まった音
 steam スチームパイプ　蒸気噴出音
 magma 溶岩の音
+magmabomb マグマ噴出音　主人公GAMEOVER
 walk1 主人公パワードスーツ歩行音
+water 水噴出音　水パイプ破裂時
+
+
 
