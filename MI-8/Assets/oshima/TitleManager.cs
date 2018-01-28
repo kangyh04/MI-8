@@ -19,5 +19,6 @@ public class TitleManager : MonoBehaviour {
 	}
 	public void PushStaffButton(){
 		SceneManager.LoadScene ("Staff");
+
 	}
 }
