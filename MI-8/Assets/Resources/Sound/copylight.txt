@@ -7,10 +7,11 @@ _6 DOVA-SYNDROME   https://dova-s.jp/
 _7 ３代目代理素材保管庫 http://viptksk3.web.fc2.com/index.html
 _10 表記必要無し
 
+stage1
+
 base-siren1 パワードスーツのガラスケースが割れたときになるアラート
 bomb1 爆発音予備
 bomb2 固定砲台爆発音　レーザーに当たって
-bomb3 ステージ２ダイナマイト
 botton1 決定音　スタートの音
 botton2 キャンセル音　ゲームを止める、タイトルへ戻るなど
 drone1 ドローン駆動音
@@ -25,19 +26,27 @@ robotstartup パワードスーツ装着、起動
 run1 予備
 scream ゲームオーバー時の主人公の悲鳴
 sea ステージ１　海　環境音
-shutter1  シャッターが降りている音
-shutter2 シャッターが止まった音
 stage1BGM ステージ１BGM
 stage1BGMlongステージ１BGM元
-stage2BGM ステージ２BGM
 stage1step ステージ１足音
 submarine1 潜水艦ソナー
 submarine2 潜水艦前進音
 quake 潜水艦が壁にぶつかった時の音
 
 
+stage2
 
-
-
-
+base-siren1 パワードスーツのガラスケースが割れたときになるアラート
+bomb3 ステージ２ダイナマイト
+contact ダイナマイト受信音
+drill ドリル駆動音
+electroshort 敵パワードスーツショート
+flame 火炎放射音
+scream ゲームオーバー時の主人公の悲鳴
+stage2BGM ステージ２BGM
+shutter1  シャッターが降りている音
+shutter2 シャッターが止まった音
+steam スチームパイプ　蒸気噴出音
+magma 溶岩の音
+walk1 主人公パワードスーツ歩行音
 
