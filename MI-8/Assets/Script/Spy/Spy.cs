@@ -36,7 +36,7 @@ public class Spy : MonoBehaviour {
     }
 
     // collision
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         // Hanger stage clear
         if( collision.tag == "PoweredSuite" )

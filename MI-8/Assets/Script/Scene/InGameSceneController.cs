@@ -41,7 +41,7 @@ public class InGameSceneController : MonoBehaviour
                 {
                     container.AddRange(
                         disturbance.Disposers
-                        .Where(disposer => disposer.DisposerType == DisposerType.Destoryer));
+                        .Where(disposer => disposer.DisposerType == DisposerType.Correct));
                     return container;
                 });
         }

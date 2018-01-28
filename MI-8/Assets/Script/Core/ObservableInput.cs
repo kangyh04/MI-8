@@ -40,14 +40,14 @@ public class ObservableInput : MonoBehaviour
             .Select(_ =>
             {
                 // NOTE : for collider
-                // RaycastHit hit;
-                // var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                // Physics.Raycast(ray.origin, ray.direction * 10, out hit);
-                // return hit;
-
-                var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                var hit = Physics2D.Raycast(pos, Vector2.zero, 0f);
+                RaycastHit hit;
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Physics.Raycast(ray.origin, ray.direction * 10, out hit);
                 return hit;
+
+                // var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                // var hit = Physics2D.Raycast(pos, Vector2.zero, 0f);
+                // return hit;
             })
             .Where(hittedObj => hittedObj.collider != null)
             .Select(hittedObj => hittedObj.collider.gameObject)
