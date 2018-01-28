@@ -6,7 +6,11 @@ _5 Wingless Seraph https://wingless-seraph.net/material-riyoukiyaku.html
 _6 DOVA-SYNDROME   https://dova-s.jp/
 _7 ３代目代理素材保管庫 http://viptksk3.web.fc2.com/index.html
 _8 フリー音楽素材 Senses Circuit http://www.senses-circuit.com/
+_9 Music-Note.jp http://pixel-co.com/
 _10 表記必要無し
+
+OP
+OPBGM OPのBGM
 
 stage1
 
@@ -59,4 +63,6 @@ walk1 主人公パワードスーツ歩行音
 water 水噴出音　水パイプ破裂時
 
 
-
+ED
+EDBGM EDのBGM
+lastbomb 最後隕石の爆発
