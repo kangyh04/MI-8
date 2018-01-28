@@ -10,6 +10,7 @@ public class RidedPoweredSuite : MonoBehaviour
     public float PwVspeed = 10.0f;
     public float PwCounterMax = 8.0f;
     public bool IsGoaled = false;
+    public bool IsGameOver = false;
 
     // private values
     float EndCounter = 0.0f;
@@ -18,6 +19,7 @@ public class RidedPoweredSuite : MonoBehaviour
     void Start()
     {
         IsGoaled = false;
+        IsGameOver = false;
         EndCounter = 0.0f;
     }
 
@@ -26,10 +28,17 @@ public class RidedPoweredSuite : MonoBehaviour
     {
         if (IsGoaled == false)
         {
-            // move horizontal
-            Vector3 pos = transform.position;
-            pos.x += PwSpeed * Time.deltaTime;
-            transform.position = pos;
+            // GameOver
+            if (IsGameOver == true)
+            {
+                // don't move
+            }else
+            {
+                // move horizontal
+                Vector3 pos = transform.position;
+                pos.x += PwSpeed * Time.deltaTime;
+                transform.position = pos;
+            }
         }
         else
         {
@@ -55,6 +64,22 @@ public class RidedPoweredSuite : MonoBehaviour
         {
             IsGoaled = true;
             Debug.Log("GAME CLEAR!!");
+        }
+
+        // Hit Obstacle
+        if (collision.tag == "Obstacle")
+        {
+            // GameOver
+            IsGameOver = true;
+            Debug.Log("Game Over by Obstacle");
+        }
+
+        // Hit any
+        if (collision.GetComponent<Disturbance>() != null)
+        {
+            // GameOver
+            IsGameOver = true;
+            Debug.Log("Game Over");
         }
     }
 }
