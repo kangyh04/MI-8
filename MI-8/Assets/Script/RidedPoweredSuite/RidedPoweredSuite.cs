@@ -7,6 +7,7 @@ public class RidedPoweredSuite : MonoBehaviour
 {
     // move speed
     public float PwSpeed = 5.0f;
+    public float PwAcceleSpeed = 0.1f;
     public float PwVspeed = 10.0f;
     public float PwCounterMax = 8.0f;
     public bool IsGoaled = false;
@@ -49,6 +50,9 @@ public class RidedPoweredSuite : MonoBehaviour
                 Vector3 pos = transform.position;
                 pos.x += PwSpeed * Time.deltaTime;
                 transform.position = pos;
+
+                // Accel
+                PwSpeed += PwAcceleSpeed;
             }
         }
         else
