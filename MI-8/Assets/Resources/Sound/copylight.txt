@@ -5,6 +5,7 @@ _4 無料効果音で遊ぼう！ http://taira-komori.jpn.org/index.html
 _5 Wingless Seraph https://wingless-seraph.net/material-riyoukiyaku.html
 _6 DOVA-SYNDROME   https://dova-s.jp/
 _7 ３代目代理素材保管庫 http://viptksk3.web.fc2.com/index.html
+_8 フリー音楽素材 Senses Circuit http://www.senses-circuit.com/
 _10 表記必要無し
 
 stage1
@@ -14,9 +15,11 @@ bomb1 爆発音予備
 bomb2 固定砲台爆発音　レーザーに当たって
 botton1 決定音　スタートの音
 botton2 キャンセル音　ゲームを止める、タイトルへ戻るなど
+dig メカモグラが土を掘る音
 drone1 ドローン駆動音
 drone2 ドローン墜落音
 electro 電気の壁の音
+get パワードスーツ入手時ジングル
 glass ガラスが割れる音
 gunfall 固定砲台（セントリーガン）が倒れる音
 lockon 固定砲台が主人公をロックオンしたときの音
@@ -38,8 +41,9 @@ stage2
 
 base-siren1 パワードスーツのガラスケースが割れたときになるアラート
 bomb3 ステージ２ダイナマイト
-boost 主人公ラスト宇宙空間まで
+boost1 主人公ラスト宇宙空間まで
 contact ダイナマイト受信音
+contact2 ドリル車リモコン操作音
 drill ドリル駆動音
 electroshort 敵パワードスーツショート
 flame 火炎放射音
