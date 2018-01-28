@@ -1,18 +1,25 @@
 _1 ■サイト名：On-Jin ～音人～　■サイトアドレス：https://on-jin.com/
 _2 【サイト名】フリー音楽素材 H/MIX GALLERY【管理者】　秋山裕和【アドレス】http://www.hmix.net/
-_3 効果音ラボhttps://soundeffect-lab.info/agreement/
-_4 無料効果音で遊ぼう！http://taira-komori.jpn.org/index.html
+_3 効果音ラボ　　　　　　https://soundeffect-lab.info/agreement/
+_4 無料効果音で遊ぼう！ http://taira-komori.jpn.org/index.html
+_5 Wingless Seraph https://wingless-seraph.net/material-riyoukiyaku.html
+_6 DOVA-SYNDROME   https://dova-s.jp/
+_7 ３代目代理素材保管庫 http://viptksk3.web.fc2.com/index.html
+_8 フリー音楽素材 Senses Circuit http://www.senses-circuit.com/
 _10 表記必要無し
+
+stage1
 
 base-siren1 パワードスーツのガラスケースが割れたときになるアラート
 bomb1 爆発音予備
 bomb2 固定砲台爆発音　レーザーに当たって
-bomb3 ステージ２ダイナマイト
 botton1 決定音　スタートの音
 botton2 キャンセル音　ゲームを止める、タイトルへ戻るなど
+dig メカモグラが土を掘る音
 drone1 ドローン駆動音
 drone2 ドローン墜落音
 electro 電気の壁の音
+get パワードスーツ入手時ジングル
 glass ガラスが割れる音
 gunfall 固定砲台（セントリーガン）が倒れる音
 lockon 固定砲台が主人公をロックオンしたときの音
@@ -20,6 +27,7 @@ machinegun1   固定砲台 発射音　跳弾あり　使用
 machinegun2   固定砲台 発車音　跳弾なし　余裕があれば主人公がタレットに撃たれた時の音はこちら
 robotstartup パワードスーツ装着、起動
 run1 予備
+scream ゲームオーバー時の主人公の悲鳴
 sea ステージ１　海　環境音
 stage1BGM ステージ１BGM
 stage1BGMlongステージ１BGM元
@@ -29,8 +37,26 @@ submarine2 潜水艦前進音
 quake 潜水艦が壁にぶつかった時の音
 
 
+stage2
 
-
+base-siren1 パワードスーツのガラスケースが割れたときになるアラート
+bomb3 ステージ２ダイナマイト
+boost1 主人公ラスト宇宙空間まで
+contact ダイナマイト受信音
+contact2 ドリル車リモコン操作音
+drill ドリル駆動音
+electroshort 敵パワードスーツショート
+flame 火炎放射音
+hover 主人公パワードスーツ移動音
+scream ゲームオーバー時の主人公の悲鳴
+stage2BGM ステージ２BGM
+shutter1  シャッターが降りている音
+shutter2 シャッターが止まった音
+steam スチームパイプ　蒸気噴出音
+magma 溶岩の音
+magmabomb マグマ噴出音　主人公GAMEOVER
+walk1 主人公パワードスーツ歩行音
+water 水噴出音　水パイプ破裂時
 
 
 

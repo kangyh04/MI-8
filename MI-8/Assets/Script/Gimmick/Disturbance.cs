@@ -51,7 +51,7 @@ public class Disturbance : MonoBehaviour
     private void Awake()
     {
         disposers
-            .Where(disposer => disposer.DisposerType == DisposerType.Destoryer)
+            .Where(disposer => disposer.DisposerType == DisposerType.Correct)
             .Select(disposer => disposer.OnTappedAsObservable())
             .ToObservable()
             .Scan((pre, cur) =>
@@ -67,7 +67,7 @@ public class Disturbance : MonoBehaviour
             .AddTo(this);
 
         disposers
-            .Where(disposer => disposer.DisposerType == DisposerType.Modifier)
+            .Where(disposer => disposer.DisposerType == DisposerType.Fake)
             .Select(disposer => disposer.OnTappedAsObservable())
             .ToObservable()
             .Scan((pre, cur) =>
