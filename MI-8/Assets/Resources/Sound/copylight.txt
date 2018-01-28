@@ -1,7 +1,10 @@
 _1 ■サイト名：On-Jin ～音人～　■サイトアドレス：https://on-jin.com/
 _2 【サイト名】フリー音楽素材 H/MIX GALLERY【管理者】　秋山裕和【アドレス】http://www.hmix.net/
-_3 効果音ラボhttps://soundeffect-lab.info/agreement/
-_4 無料効果音で遊ぼう！http://taira-komori.jpn.org/index.html
+_3 効果音ラボ　　　　　　https://soundeffect-lab.info/agreement/
+_4 無料効果音で遊ぼう！ http://taira-komori.jpn.org/index.html
+_5 Wingless Seraph https://wingless-seraph.net/material-riyoukiyaku.html
+_6 DOVA-SYNDROME   https://dova-s.jp/
+_7 ３代目代理素材保管庫 http://viptksk3.web.fc2.com/index.html
 _10 表記必要無し
 
 base-siren1 パワードスーツのガラスケースが割れたときになるアラート
@@ -20,9 +23,13 @@ machinegun1   固定砲台 発射音　跳弾あり　使用
 machinegun2   固定砲台 発車音　跳弾なし　余裕があれば主人公がタレットに撃たれた時の音はこちら
 robotstartup パワードスーツ装着、起動
 run1 予備
+scream ゲームオーバー時の主人公の悲鳴
 sea ステージ１　海　環境音
+shutter1  シャッターが降りている音
+shutter2 シャッターが止まった音
 stage1BGM ステージ１BGM
 stage1BGMlongステージ１BGM元
+stage2BGM ステージ２BGM
 stage1step ステージ１足音
 submarine1 潜水艦ソナー
 submarine2 潜水艦前進音
