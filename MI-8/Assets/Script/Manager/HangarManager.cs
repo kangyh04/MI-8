@@ -97,7 +97,7 @@ public class HangarManager : MonoBehaviour
             if(RestartCounter > RestartCounterMax)
             {
                 SceneManager.LoadScene("Hangar");
-                //SceneManager.LoadScene("IshihataFade");
+                //SceneManager.LoadScene("IshihataHanger");
             }
         }
 

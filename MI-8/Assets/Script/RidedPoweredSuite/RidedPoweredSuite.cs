@@ -11,9 +11,15 @@ public class RidedPoweredSuite : MonoBehaviour
     public float PwCounterMax = 8.0f;
     public bool IsGoaled = false;
     public bool IsGameOver = false;
+    public float WaitCounterMax = 1.0f;
 
     // private values
     float EndCounter = 0.0f;
+    float WaitCounter = 0.0f;
+    bool IsWait = false;
+
+    // GameObjects
+    GameObject EfxBlast;
 
     // Use this for initialization
     void Start()
@@ -21,6 +27,11 @@ public class RidedPoweredSuite : MonoBehaviour
         IsGoaled = false;
         IsGameOver = false;
         EndCounter = 0.0f;
+
+        IsWait = false;
+        WaitCounter = 0.0f;
+
+        EfxBlast = GameObject.Find("EfxBlast");
     }
 
     // Update is called once per frame
@@ -42,17 +53,29 @@ public class RidedPoweredSuite : MonoBehaviour
         }
         else
         {
-            // move vertical
-            Vector3 pos = transform.position;
-            pos.y += PwVspeed * Time.deltaTime;
-            transform.position = pos;
+            if( IsWait == true)
+            {
+                // don't move
+                WaitCounter += Time.deltaTime;
+                if(WaitCounter > WaitCounterMax)
+                {
+                    IsWait = false;
+                }
+            }
+            else
+            {
+                // move vertical
+                Vector3 pos = transform.position;
+                pos.y += PwVspeed * Time.deltaTime;
+                transform.position = pos;
+            }
 
             // counter
-            EndCounter += Time.deltaTime;
-            if(EndCounter > PwCounterMax )
-            {
-                //SceneManager.LoadScene("GameTitle");
-            }
+            //EndCounter += Time.deltaTime;
+            //if(EndCounter > PwCounterMax )
+            //{
+            //SceneManager.LoadScene("GameTitle");
+            //}
         }
     }
 
@@ -63,6 +86,8 @@ public class RidedPoweredSuite : MonoBehaviour
         if (collision.tag == "Ladders")
         {
             IsGoaled = true;
+            IsWait = true;
+            EfxBlast.GetComponent<ParticleSystem>().Play();
             Debug.Log("GAME CLEAR!!");
         }
 
