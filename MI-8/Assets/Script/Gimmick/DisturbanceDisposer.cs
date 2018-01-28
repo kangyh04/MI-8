@@ -6,8 +6,8 @@ using UnityEngine;
 
 public enum DisposerType
 {
-    Destoryer,
-    Modifier,
+    Correct,
+    Fake,
 }
 
 public class DisturbanceDisposer : MonoBehaviour
