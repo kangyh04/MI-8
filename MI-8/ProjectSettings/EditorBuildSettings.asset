@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/GameTitle.unity
     guid: 2137497fb7cfeca40b8630aebbfe833f
   - enabled: 1
+    path: Assets/Scenes/intoro.unity
+    guid: b9a24f3046d127344ad9e3ea4e03bf52
+  - enabled: 1
+    path: Assets/Scenes/Staff.unity
+    guid: cc83d501bb531bc4ea7e2e6fccead66a
+  - enabled: 1
     path: Assets/Scenes/Hangar.unity
     guid: c7d4417d3ee28c14bb6b23ce4ac146cc
   - enabled: 1
